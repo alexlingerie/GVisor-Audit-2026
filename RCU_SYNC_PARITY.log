@@ -1,0 +1,5 @@
+--- INFORME DE PARIDAD DE SINCRONIZACIÓN (RCU/SEQ_CST) ---
+DETECTION: Mandatory Sequential Consistency (seq_cst) in Atomic Operations
+PROTOCOLO: ARCH-PROT-2025 / FUSION v2.0
+EVIDENCIA: Headers en __atomic/atomic.h fuerzan seq_cst por defecto.
+HASH_RELACIONADO: 5454BCP_VRP_GVISOR_NODE_SEC_FIX_0x82A1
