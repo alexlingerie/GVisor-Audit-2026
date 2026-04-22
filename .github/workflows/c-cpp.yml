@@ -16,24 +16,23 @@ jobs:
       with:
         node-version: '20'
 
+    - name: Configurar Entorno
+      run: sudo apt-get update && sudo apt-get install -y build-essential python3
+
     - name: System Baseline (Vector-Y)
       run: |
         ulimit -n
-        # Verificamos si el archivo existe antes de correrlo
         if [ -f fd_pressure_test.py ]; then
           python3 fd_pressure_test.py || echo "Expected resource limit reached"
-        else
-          echo "fd_pressure_test.py not found, skipping baseline."
         fi
 
     - name: Execute ARCH-PROT-2025 (Vector-X)
       run: |
-        # Buscamos cualquier archivo .mjs si el nombre exacto falla
         MJS_FILE=$(ls *.mjs | head -n 1)
         if [ ! -z "$MJS_FILE" ]; then
           node $MJS_FILE
         else
-          echo "No .mjs file found for Vector-X."
+          echo "No .mjs file found."
           exit 1
         fi
       env:
@@ -42,11 +41,7 @@ jobs:
     - name: Audit Status Check
       run: |
         if [ -f EVIDENCE_APRIL_2026.log ]; then
-          if grep -q "BYPASS_CONFIRMED" EVIDENCE_APRIL_2026.log; then
-            echo "Audit verified successfully."
-          else
-            echo "Warning: Evidence found but no bypass signature detected."
-          fi
+          grep -q "BYPASS_CONFIRMED" EVIDENCE_APRIL_2026.log && echo "Audit verified." || echo "No signature found."
         else
-          echo "Evidence log missing."
+          echo "Log missing."
         fi
