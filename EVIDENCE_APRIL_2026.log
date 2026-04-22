@@ -9,3 +9,23 @@ Script started on 2026-04-22 15:31:30-06:00 [COMMAND="node arch_prot_2025.mjs" T
 [RESULTADO] CSP Bypass confirmado en entorno Buganizer.
 
 Script done on 2026-04-22 15:31:31-06:00 [COMMAND_EXIT_CODE="0"]
+🚀 [ATTACK] Apuntando al límite de 32768 FDs...
+   [+] Descriptores alcanzados: 5000
+   [+] Descriptores alcanzados: 10000
+   [+] Descriptores alcanzados: 15000
+   [+] Descriptores alcanzados: 20000
+   [+] Descriptores alcanzados: 25000
+   [+] Descriptores alcanzados: 30000
+
+🛡️ [BLOQUEO] Sistema saturado en 32764 FDs.
+🎯 Resultado: [Errno 24] Too many open files: '/dev/null'
+🚀 [ATTACK] Apuntando al límite de 32768 FDs...
+   [+] Descriptores alcanzados: 5000
+   [+] Descriptores alcanzados: 10000
+   [+] Descriptores alcanzados: 15000
+   [+] Descriptores alcanzados: 20000
+   [+] Descriptores alcanzados: 25000
+   [+] Descriptores alcanzados: 30000
+
+🛡️ [BLOQUEO] Sistema saturado en 32764 FDs.
+🎯 Resultado: [Errno 24] Too many open files: '/dev/null'
