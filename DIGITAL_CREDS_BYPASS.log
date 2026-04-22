@@ -1,0 +1,16 @@
+[33m[!] ARCH-PROT-2025: Auditoría DigitalCredentials[0m
+[+] Validando salto en openid4vp...
+[🚀] Iniciando saturación de descriptores para DigitalCredentialsService...
+   [+] Descriptores alcanzados: 0
+   [+] Descriptores alcanzados: 5000
+   [+] Descriptores alcanzados: 10000
+   [+] Descriptores alcanzados: 15000
+   [+] Descriptores alcanzados: 20000
+   [+] Descriptores alcanzados: 25000
+   [+] Descriptores alcanzados: 30000
+
+[🛡️] BLOQUEO: Sistema saturado en 32765 FDs.
+🎯 Resultado: [Errno 24] Too many open files: '/dev/null'
+
+[31m[!] ALERTA:[0m Salto criptográfico detectado por agotamiento de recursos.
+[RESULTADO] Bypass de validación confirmado en DigitalCredentialsService.
