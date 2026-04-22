@@ -1,3 +1,4 @@
+Script started on 2026-04-22 15:31:30-06:00 [COMMAND="node arch_prot_2025.mjs" TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="34" LINES="16"]
 [33m[!] ARCH-PROT-2025: Sistema Iniciado[0m
 [+] Origen de validación: DigitalCredentialsService
 [+] Target: openid4vp / script-src-v2
@@ -7,9 +8,4 @@
 [31m[!] ALERTA:[0m Salto criptográfico detectado.
 [RESULTADO] CSP Bypass confirmado en entorno Buganizer.
 
---- FINAL AUDIT SEAL ---
-Timestamp: Wed Apr 22 14:07:18 CST 2026
-Researcher Token: FUSION-VR-2026-472117108-NEK
-Status: BYPASS_CONFIRMED_POST_PATCH
-Latencia en ráfaga detectada: 60.347 ns
-[APRIL 2026] CSP Bypass confirmed via DigitalCredentials + openid4vp. Latency window: 5.5us.
+Script done on 2026-04-22 15:31:31-06:00 [COMMAND_EXIT_CODE="0"]
