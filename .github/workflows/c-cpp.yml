@@ -1,20 +1,26 @@
-name: C/C++ CI
+name: C/C++ CI Audit
 
 on:
   push:
     branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
-  audit-run:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v3
     
-    - name: Configurar Entorno
-      run: sudo apt-get update && sudo apt-get install -p build-essential python3 -y
+    - name: Install Build Essentials
+      run: sudo apt-get update && sudo apt-get install -y build-essential
 
-    - name: Ejecutar Auditoría de Recursos (FD Exhaustion)
-      run: make stress_test
+    - name: configure
+      run: ./configure
 
-    - name: Validar Parche de Seguridad (Mojo Stack Fix)
-      run: make verify_patch
+    - name: make
+      run: make
+
+    - name: run audit
+      run: ./audit_check --self-test
