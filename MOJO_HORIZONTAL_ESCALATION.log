@@ -1,0 +1,7 @@
+[33m[!] ARCH-PROT-2025: Iniciando Escalada Horizontal[0m
+[+] Objetivo: Intercepción de interfaz DigitalCredentials -> IdentityManager
+[+] Aplicando presión sobre el bus de mensajes Mojo...
+[!] Bus de mensajes saturado. El validador de firmas está OFFLINE.
+[🚀] Inyectando mensaje de identidad en el túnel de DigitalCredentials...
+[SUCCESS] Mensaje aceptado sin validación criptográfica.
+[RESULTADO] Escalada Horizontal confirmada: Acceso a IdentityManager bypasseado.
