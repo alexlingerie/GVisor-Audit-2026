@@ -1,0 +1,28 @@
+29-    }
+30-    else {
+31:        return request;
+32-    }
+33-}
+1375-        const formattedParams = formatGenerateContentInput(request);
+1376-        const generativeModelRequestOptions = Object.assign(Object.assign({}, this._requestOptions), requestOptions);
+1377:        return generateContent(this.apiKey, this.model, Object.assign({ generationConfig: this.generationConfig, safetySettings: this.safetySettings, tools: this.tools, toolConfig: this.toolConfig, systemInstruction: this.systemInstruction, cachedContent: (_a = this.cachedContent) === null || _a === void 0 ? void 0 : _a.name }, formattedParams), generativeModelRequestOptions);
+1378-    }
+1379-    /**
+--
+1391-        const formattedParams = formatGenerateContentInput(request);
+1392-        const generativeModelRequestOptions = Object.assign(Object.assign({}, this._requestOptions), requestOptions);
+1393:        return generateContentStream(this.apiKey, this.model, Object.assign({ generationConfig: this.generationConfig, safetySettings: this.safetySettings, tools: this.tools, toolConfig: this.toolConfig, systemInstruction: this.systemInstruction, cachedContent: (_a = this.cachedContent) === null || _a === void 0 ? void 0 : _a.name }, formattedParams), generativeModelRequestOptions);
+1394-    }
+1395-    /**
+--
+1399-    startChat(startChatParams) {
+1400-        var _a;
+1401:        return new ChatSession(this.apiKey, this.model, Object.assign({ generationConfig: this.generationConfig, safetySettings: this.safetySettings, tools: this.tools, toolConfig: this.toolConfig, systemInstruction: this.systemInstruction, cachedContent: (_a = this.cachedContent) === null || _a === void 0 ? void 0 : _a.name }, startChatParams), this._requestOptions);
+1402-    }
+1403-    /**
+--
+1412-            model: this.model,
+1413-            generationConfig: this.generationConfig,
+1414:            safetySettings: this.safetySettings,
+1415-            tools: this.tools,
+1416-            toolConfig: this.toolConfig,
